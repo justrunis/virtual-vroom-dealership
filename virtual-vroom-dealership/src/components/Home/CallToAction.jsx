@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function CallToAction() {
+  const navigate = useNavigate();
+
   function handleClick() {
     console.log("Explore Inventory button clicked!");
+    navigate("/vehicles");
   }
 
   return (
@@ -16,7 +20,7 @@ export default function CallToAction() {
         className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold transition duration-300"
         onClick={handleClick}
       >
-        Explore Inventory
+        Explore Vehicles
       </button>
     </motion.div>
   );

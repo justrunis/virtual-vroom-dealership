@@ -16,8 +16,8 @@ export default function Header() {
             className="inline p-2"
             width={160}
             height={80}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
           />
         </Link>
       </div>
@@ -39,6 +39,18 @@ export default function Header() {
           className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
         >
           Contact
+        </Link>
+        <Link
+          to="/about"
+          className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+        >
+          About
+        </Link>
+        <Link
+          to="/services"
+          className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+        >
+          Services
         </Link>
       </div>
     </header>
