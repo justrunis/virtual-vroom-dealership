@@ -5,9 +5,13 @@ export const cars = [
     model: "Corolla",
     year: 2021,
     price: 20000,
-    imageUrl: "https://source.unsplash.com/1600x900/?toyota-corolla",
-    color: "blue",
+    imageUrl:
+      "https://i.pinimg.com/736x/e2/86/11/e286116013bb23582db360dd12d593e3.jpg",
+    color: "white",
     mileage: 5000,
+    type: "Sedan",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 2,
@@ -15,9 +19,12 @@ export const cars = [
     model: "Civic",
     year: 2021,
     price: 25000,
-    imageUrl: "https://source.unsplash.com/1600x900/?honda-civic",
-    color: "red",
+    imageUrl: "https://freepngimg.com/save/31953-honda-civic/779x369",
+    color: "white",
     mileage: 3000,
+    type: "Sedan",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 3,
@@ -25,9 +32,12 @@ export const cars = [
     model: "Mustang",
     year: 2022,
     price: 35000,
-    imageUrl: "https://source.unsplash.com/1600x900/?ford-mustang",
-    color: "yellow",
+    imageUrl: "https://pngimg.com/d/mustang_PNG47.png",
+    color: "blue",
     mileage: 1500,
+    type: "Sports",
+    gearboxType: "Manual",
+    fuelType: "Petrol",
   },
   {
     id: 4,
@@ -35,9 +45,13 @@ export const cars = [
     model: "Camaro",
     year: 2020,
     price: 30000,
-    imageUrl: "https://source.unsplash.com/1600x900/?chevrolet-camaro",
-    color: "black",
+    imageUrl:
+      "https://i.pinimg.com/originals/e7/c7/f5/e7c7f5d816bc9dc15583343d73cbda43.png",
+    color: "yellow",
     mileage: 8000,
+    type: "Sports",
+    gearboxType: "Manual",
+    fuelType: "Petrol",
   },
   {
     id: 5,
@@ -45,9 +59,12 @@ export const cars = [
     model: "3 Series",
     year: 2021,
     price: 40000,
-    imageUrl: "https://source.unsplash.com/1600x900/?bmw-3series",
+    imageUrl: "https://cdn.euroncap.com/media/55096/bmw-3-series.png",
     color: "white",
     mileage: 4000,
+    type: "Sedan",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 6,
@@ -55,9 +72,13 @@ export const cars = [
     model: "C-Class",
     year: 2022,
     price: 45000,
-    imageUrl: "https://source.unsplash.com/1600x900/?mercedes-cclass",
+    imageUrl:
+      "https://pics.clipartpng.com/Polar_White_Mercedes_Benz_C_Class_2014_Car_PNG_Clipart-121.png",
     color: "silver",
     mileage: 2000,
+    type: "Sedan",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 7,
@@ -65,9 +86,13 @@ export const cars = [
     model: "A4",
     year: 2020,
     price: 38000,
-    imageUrl: "https://source.unsplash.com/1600x900/?audi-a4",
-    color: "gray",
+    imageUrl:
+      "https://di-uploads-pod3.dealerinspire.com/vindeversautohausofsylvania/uploads/2019/02/2019-Audi-A4-MLP-Hero.png",
+    color: "black",
     mileage: 6000,
+    type: "Sedan",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 8,
@@ -75,9 +100,13 @@ export const cars = [
     model: "Model S",
     year: 2023,
     price: 70000,
-    imageUrl: "https://source.unsplash.com/1600x900/?tesla-models",
-    color: "green",
+    imageUrl:
+      "https://www.pngall.com/wp-content/uploads/11/Tesla-Model-S-PNG-Free-Image.png",
+    color: "red",
     mileage: 1000,
+    type: "Sedan",
+    gearboxType: "Automatic",
+    fuelType: "Electric",
   },
   {
     id: 9,
@@ -85,9 +114,13 @@ export const cars = [
     model: "RX",
     year: 2021,
     price: 48000,
-    imageUrl: "https://source.unsplash.com/1600x900/?lexus-rx",
-    color: "purple",
+    imageUrl:
+      "https://purepng.com/public/uploads/large/purepng.com-lexus-rx-350-f-white-carcarvehicletransportlexus-961524658910lzvkm.png",
+    color: "white",
     mileage: 3000,
+    type: "SUV",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 10,
@@ -95,20 +128,26 @@ export const cars = [
     model: "Outback",
     year: 2022,
     price: 32000,
-    imageUrl: "https://source.unsplash.com/1600x900/?subaru-outback",
-    color: "orange",
+    imageUrl:
+      "https://i.pinimg.com/originals/d6/7d/61/d67d616b7f2698452cd331f0819beb92.png",
+    color: "white",
     mileage: 5000,
+    type: "SUV",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
-  // Additional cars
   {
     id: 11,
     make: "Volkswagen",
     model: "Golf",
     year: 2021,
     price: 22000,
-    imageUrl: "https://source.unsplash.com/1600x900/?volkswagen-golf",
-    color: "gray",
+    imageUrl: "https://cdn.euroncap.com/media/71344/vw-golf.png",
+    color: "blue",
     mileage: 4000,
+    type: "Hatchback",
+    gearboxType: "Manual",
+    fuelType: "Petrol",
   },
   {
     id: 12,
@@ -116,9 +155,13 @@ export const cars = [
     model: "Wrangler",
     year: 2022,
     price: 38000,
-    imageUrl: "https://source.unsplash.com/1600x900/?jeep-wrangler",
-    color: "green",
+    imageUrl:
+      "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25e46530b1e3d8e88cb/stills_0640_png/MY2021/14720/14720_st0640_116.png",
+    color: "red",
     mileage: 2000,
+    type: "SUV",
+    gearboxType: "Manual",
+    fuelType: "Diesel",
   },
   {
     id: 13,
@@ -126,9 +169,13 @@ export const cars = [
     model: "Altima",
     year: 2021,
     price: 24000,
-    imageUrl: "https://source.unsplash.com/1600x900/?nissan-altima",
-    color: "silver",
+    imageUrl:
+      "https://vehicle-images.dealerinspire.com/stock-images/chrome/e8e53b496bc9d2d4b99ed8301e9e330b.png",
+    color: "blue",
     mileage: 3000,
+    type: "Sedan",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 14,
@@ -136,9 +183,13 @@ export const cars = [
     model: "CX-5",
     year: 2022,
     price: 28000,
-    imageUrl: "https://source.unsplash.com/1600x900/?mazda-cx5",
+    imageUrl:
+      "https://media-assets.mazda.eu/image/upload/q_auto,f_auto/mazdauk/globalassets/cars/2023-mazda-cx-5/clearcuts/mme_cx5_kdssbad_46v_7-8.png?rnd=48ff7a",
     color: "red",
     mileage: 1500,
+    type: "SUV",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 15,
@@ -146,9 +197,13 @@ export const cars = [
     model: "Tucson",
     year: 2021,
     price: 26000,
-    imageUrl: "https://source.unsplash.com/1600x900/?hyundai-tucson",
-    color: "blue",
+    imageUrl:
+      "https://vehicle-images.dealerinspire.com/stock-images/chrome/eb35f25a7c3adc7f2fed6dd3bbbeaece.png",
+    color: "gray",
     mileage: 5000,
+    type: "SUV",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 16,
@@ -156,9 +211,13 @@ export const cars = [
     model: "Sorento",
     year: 2022,
     price: 32000,
-    imageUrl: "https://source.unsplash.com/1600x900/?kia-sorento",
-    color: "white",
+    imageUrl:
+      "https://di-uploads-pod19.dealerinspire.com/rontonkinkia/uploads/2022/12/mlp-img-top-2023-sorento-temp.png",
+    color: "silver",
     mileage: 2000,
+    type: "SUV",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 17,
@@ -166,9 +225,13 @@ export const cars = [
     model: "XC60",
     year: 2021,
     price: 40000,
-    imageUrl: "https://source.unsplash.com/1600x900/?volvo-xc60",
-    color: "black",
+    imageUrl:
+      "https://www.lloydmotorgroup.com/ImageLibrary/images/Volvo/Retail/New%20Car%20Range/V2/Volvo_XC60_Mild_Hybrid_Core.png?mode=max&upscale=true&width=640",
+    color: "gray",
     mileage: 4000,
+    type: "SUV",
+    gearboxType: "Automatic",
+    fuelType: "Petrol",
   },
   {
     id: 18,
@@ -176,9 +239,13 @@ export const cars = [
     model: "911",
     year: 2022,
     price: 90000,
-    imageUrl: "https://source.unsplash.com/1600x900/?porsche-911",
-    color: "yellow",
+    imageUrl:
+      "https://platform.cstatic-images.com/in/v2/stock_photos/c709cfc8-56fa-4a5c-865a-99193e3f56bb/40744381-289d-44f3-87ed-ba452e991480.png",
+    color: "silver",
     mileage: 1000,
+    type: "Sports",
+    gearboxType: "Manual",
+    fuelType: "Petrol",
   },
   {
     id: 19,
@@ -186,9 +253,13 @@ export const cars = [
     model: "F-Type",
     year: 2021,
     price: 75000,
-    imageUrl: "https://source.unsplash.com/1600x900/?jaguar-ftype",
+    imageUrl:
+      "https://i.pinimg.com/originals/58/b1/14/58b1147d12c03bfbb8d902a96a80f187.png",
     color: "orange",
     mileage: 3000,
+    type: "Sports",
+    gearboxType: "Manual",
+    fuelType: "Petrol",
   },
   {
     id: 20,
@@ -196,8 +267,128 @@ export const cars = [
     model: "Range Rover",
     year: 2022,
     price: 100000,
-    imageUrl: "https://source.unsplash.com/1600x900/?landrover-rangerover",
-    color: "silver",
+    imageUrl:
+      "https://www.pngall.com/wp-content/uploads/7/Land-Rover-PNG-Download-Image.png",
+    color: "black",
     mileage: 500,
+    type: "SUV",
+    gearboxType: "Automatic",
+    fuelType: "Diesel",
+  },
+];
+
+export const carMakes = [
+  {
+    id: 1,
+    make: "Toyota",
+    imageUrl:
+      "https://1000logos.net/wp-content/uploads/2018/02/Toyota-logo.png",
+  },
+  {
+    id: 2,
+    make: "Honda",
+    imageUrl:
+      "https://logowik.com/content/uploads/images/honda5836.logowik.com.webp",
+  },
+  {
+    id: 3,
+    make: "Ford",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg",
+  },
+  {
+    id: 4,
+    make: "Chevrolet",
+    imageUrl: "https://pngimg.com/uploads/chevrolet/%D1%81hevrolet_PNG109.png",
+  },
+  {
+    id: 5,
+    make: "BMW",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg",
+  },
+  {
+    id: 6,
+    make: "Mercedes-Benz",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg",
+  },
+  {
+    id: 7,
+    make: "Audi",
+    imageUrl: "https://www.freepnglogos.com/uploads/audi-logo-0.gif",
+  },
+  {
+    id: 8,
+    make: "Tesla",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+  },
+  {
+    id: 9,
+    make: "Lexus",
+    imageUrl: "https://www.carlogos.org/logo/Lexus-symbol-1988-1920x1080.png",
+  },
+  {
+    id: 10,
+    make: "Subaru",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/4/47/Subaru_logo.svg",
+  },
+  {
+    id: 11,
+    make: "Volkswagen",
+    imageUrl:
+      "https://upload.wikimedia.org/wikinews/en/d/d3/Volkswagen_logo.png",
+  },
+  {
+    id: 12,
+    make: "Jeep",
+    imageUrl: "https://logowik.com/content/uploads/images/jeep-black3443.jpg",
+  },
+  {
+    id: 13,
+    make: "Nissan",
+    imageUrl:
+      "https://cdn.freebiesupply.com/logos/large/2x/nissan-6-logo-png-transparent.png",
+  },
+  {
+    id: 14,
+    make: "Mazda",
+    imageUrl: "https://pngimg.com/d/mazda_PNG86.png",
+  },
+  {
+    id: 15,
+    make: "Hyundai",
+    imageUrl:
+      "https://logos-world.net/wp-content/uploads/2021/03/Hyundai-Emblem.png",
+  },
+  {
+    id: 16,
+    make: "Kia",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/1/13/Kia-logo.png",
+  },
+  {
+    id: 17,
+    make: "Volvo",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Volvo-Iron-Mark-Black.svg/1024px-Volvo-Iron-Mark-Black.svg.png",
+  },
+  {
+    id: 18,
+    make: "Porsche",
+    imageUrl: "https://pngimg.com/d/porsche_logo_PNG1.png",
+  },
+  {
+    id: 19,
+    make: "Jaguar",
+    imageUrl:
+      "https://cdn.freebiesupply.com/logos/large/2x/jaguar-cars-logo-png-transparent.png",
+  },
+  {
+    id: 20,
+    make: "Land Rover",
+    imageUrl:
+      "https://www.carlogos.org/logo/Land-Rover-logo-2011-1920x1080.png",
   },
 ];
