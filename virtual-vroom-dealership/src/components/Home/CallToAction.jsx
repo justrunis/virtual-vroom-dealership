@@ -6,7 +6,7 @@ export default function CallToAction() {
 
   function handleClick() {
     console.log("Explore Inventory button clicked!");
-    navigate("/vehicles");
+    navigate("/models");
   }
 
   return (

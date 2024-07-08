@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import Models from "./pages/Models";
 import Vehicles from "./pages/Vehicles";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -11,7 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/vehicles" element={<Vehicles />} />
+          <Route path="/models" element={<Models />} />
+          <Route path="/vehicles/:make" element={<Vehicles />} />
         </Routes>
       </BrowserRouter>
     </>
