@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
+import { useSelector, useDispatch } from "react-redux";
+import { cartActions } from "../../store/slices/cartSlice";
+import { toast } from "react-toastify";
 
 export default function VehicleCard({ car, delay = 0 }) {
+  const dispatch = useDispatch();
+
+  function handleAddToCart() {
+    dispatch(cartActions.addItemToCart(car));
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -20,7 +29,9 @@ export default function VehicleCard({ car, delay = 0 }) {
       </div>
       <div className="flex gap-5 justify-center items-center p-4">
         <button className="btn btn-primary">View Details</button>
-        <button className="btn btn-success">Add to Cart</button>
+        <button onClick={handleAddToCart} className="btn btn-success">
+          Add to Cart
+        </button>
       </div>
     </motion.div>
   );

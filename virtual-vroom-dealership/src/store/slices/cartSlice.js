@@ -22,6 +22,7 @@ const cartSlice = createSlice({
         state.items.push({
           id: item.id,
           title: item.make + " " + item.model,
+          imageUrl: item.imageUrl,
           price: parseFloat(item.price),
           quantity: 1,
           totalPrice: parseFloat(item.price),
@@ -46,6 +47,7 @@ const cartSlice = createSlice({
       }
     },
     showCart(state) {
+      console.log("show cart");
       state.show = true;
     },
     hideCart(state) {

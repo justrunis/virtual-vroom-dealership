@@ -9,11 +9,13 @@ import { cars } from "../data/cars";
 export default function Vehicles() {
   const { make } = useParams();
 
+  const vehicles = cars.filter((car) => car.make.toLowerCase() === make);
+
   return (
-    <main className="flex flex-col min-h-screen">
-      <Header />
-      <BackgroundImage imageUrl={make.imageUrl}></BackgroundImage>
-      <Footer />
-    </main>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      {vehicles.map((vehicle, index) => (
+        <VehicleCard key={vehicle.id} car={vehicle} delay={index * 0.2} />
+      ))}
+    </div>
   );
 }

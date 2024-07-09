@@ -1,18 +1,41 @@
 import { motion } from "framer-motion";
 
-const FeatureItem = ({ iconClass, title, description, delay }) => {
+const FeatureItem = ({
+  iconClass,
+  title,
+  description,
+  imageUrl,
+  delay,
+  alternate = false,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay }}
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 1 }}
-      className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className={`p-4 flex ${
+        alternate ? "flex-col 2xl:flex-row-reverse" : "flex-col 2xl:flex-row"
+      } gap-5 items-center`}
     >
-      <i className={`${iconClass} text-3xl text-gray-600 mb-4`}></i>
-      <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <motion.img
+        src={imageUrl}
+        alt={title}
+        className="w-100 h-100 mx-auto mb-4"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: delay + 0.2 }}
+        width={1080}
+        height={720}
+      />
+
+      <div>
+        <h3 className="text-4xl font-semibold text-primary-content mb-2">
+          {title}
+        </h3>
+        <p className="text-2xl text-primary-content ">{description}</p>
+      </div>
     </motion.div>
   );
 };

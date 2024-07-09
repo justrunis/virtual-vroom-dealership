@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-export default function Footer() {
+export default function Footer({ children }) {
   return (
-    <footer className="bg-primary text-primary-content p-4">
+    <footer className="bg-primary text-primary-content p-4 w-full flex justify-center fixed left-0 bottom-0">
       <div className="flex justify-center items-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

@@ -1,21 +1,44 @@
 import Home from "./pages/Home";
 import Models from "./pages/Models";
 import Vehicles from "./pages/Vehicles";
+import Contact from "./pages/Contact";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import BackgroundImage from "./components/Home/BackgroundImage";
+import carIcon from "./assets/background_image.jpg";
+import { Provider } from "react-redux";
+import store from "./store/index";
+import Header from "./components/UI/Header";
+import Footer from "./components/UI/Footer";
+import Cart from "./components/Cart/Cart";
+import "tw-elements";
+
+import { ThemeProvider } from "@material-tailwind/react";
 
 function App() {
   return (
     <>
-      <ToastContainer position="top-center" />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/models" element={<Models />} />
-          <Route path="/vehicles/:make" element={<Vehicles />} />
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <ToastContainer position="top-center" />
+        <Provider store={store}>
+          <BrowserRouter>
+            <main className="flex flex-col min-h-screen">
+              <Header />
+              <BackgroundImage imageUrl={carIcon}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/models" element={<Models />} />
+                  <Route path="/vehicles/:make" element={<Vehicles />} />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+                <Footer />
+              </BackgroundImage>
+            </main>
+            <Cart />
+          </BrowserRouter>
+        </Provider>
+      </ThemeProvider>
     </>
   );
 }

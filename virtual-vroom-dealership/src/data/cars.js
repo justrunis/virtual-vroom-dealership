@@ -19,7 +19,8 @@ export const cars = [
     model: "Civic",
     year: 2021,
     price: 25000,
-    imageUrl: "https://freepngimg.com/save/31953-honda-civic/779x369",
+    imageUrl:
+      "https://www.freeiconspng.com/thumbs/honda-logo-png/honda-logo-png-picture-20.png",
     color: "white",
     mileage: 3000,
     type: "Sedan",

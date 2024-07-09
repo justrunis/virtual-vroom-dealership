@@ -8,8 +8,8 @@ export default function HeroSection({ title, subtitle, animationDuration }) {
       transition={{ duration: animationDuration || 0.5 }}
       className="text-center"
     >
-      <h1 className="text-4xl font-bold text-primary-content mb-4">{title}</h1>
-      <p className="text-lg text-primary-content mb-8">{subtitle}</p>
+      <h1 className="text-6xl font-bold text-primary-content mb-4">{title}</h1>
+      <p className="text-2xl text-primary-content mb-8">{subtitle}</p>
     </motion.div>
   );
 }
