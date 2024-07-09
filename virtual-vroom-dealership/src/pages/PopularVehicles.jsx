@@ -17,7 +17,6 @@ export default function PopularVehicles() {
   }
 
   const randomVehicles = getRandomCars(10);
-  console.log(randomVehicles);
 
   return (
     <motion.div

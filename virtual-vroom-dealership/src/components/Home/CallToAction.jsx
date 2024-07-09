@@ -5,7 +5,6 @@ export default function CallToAction() {
   const navigate = useNavigate();
 
   function handleClick() {
-    console.log("Explore Inventory button clicked!");
     navigate("/models");
   }
 

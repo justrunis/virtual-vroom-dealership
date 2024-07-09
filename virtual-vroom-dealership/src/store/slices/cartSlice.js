@@ -18,7 +18,6 @@ const cartSlice = createSlice({
     addItemToCart(state, action) {
       const item = action.payload;
       const existingItem = state.items.find((i) => i.id === item.id);
-      console.log(item);
       if (!existingItem) {
         state.items.push({
           id: item.id,
@@ -48,7 +47,6 @@ const cartSlice = createSlice({
       }
     },
     showCart(state) {
-      console.log("show cart");
       state.show = true;
     },
     hideCart(state) {

@@ -10,8 +10,6 @@ export default function VehicleCard({ car, delay = 0 }) {
     dispatch(cartActions.addItemToCart(car));
   }
 
-  console.log(car);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
