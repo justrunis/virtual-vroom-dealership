@@ -3,6 +3,7 @@ import Models from "./pages/Models";
 import Vehicles from "./pages/Vehicles";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import PopularVehicles from "./pages/PopularVehicles";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BackgroundImage from "./components/Home/BackgroundImage";
@@ -31,6 +32,7 @@ function App() {
                   <Route path="/vehicles/:make" element={<Vehicles />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/about" element={<About />} />
+                  <Route path="/popular" element={<PopularVehicles />} />
                 </Routes>
                 <Footer />
               </BackgroundImage>

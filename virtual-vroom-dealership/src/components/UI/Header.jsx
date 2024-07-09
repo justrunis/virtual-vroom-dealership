@@ -5,7 +5,7 @@ import {
   AiOutlineShoppingCart,
   AiOutlinePhone,
   AiOutlineInfoCircle,
-  AiOutlineTool,
+  AiOutlineStar,
 } from "react-icons/ai";
 import logo from "../../../public/logo-no-background.svg";
 import { motion } from "framer-motion";
@@ -97,12 +97,19 @@ export default function Header() {
             Models
           </Link>
           <Link
-            onClick={handleShowCart}
+            to="/popular"
             className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
           >
-            <AiOutlineShoppingCart className="inline mr-1" />
-            Cart {useSelector((state) => state.cart.items.length)}
+            <AiOutlineStar className="inline mr-1" />
+            Top picks
           </Link>
+          <Link
+            to="/about"
+            className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+          >
+            <AiOutlineInfoCircle className="inline mr-1" />
+            About
+          </Link>{" "}
           <Link
             to="/contact"
             className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
@@ -111,18 +118,11 @@ export default function Header() {
             Contact
           </Link>
           <Link
-            to="/about"
+            onClick={handleShowCart}
             className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
           >
-            <AiOutlineInfoCircle className="inline mr-1" />
-            About
-          </Link>
-          <Link
-            to="/services"
-            className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
-          >
-            <AiOutlineTool className="inline mr-1" />
-            Services
+            <AiOutlineShoppingCart className="inline mr-1" />
+            Cart {useSelector((state) => state.cart.items.length)}
           </Link>
         </nav>
       </div>
