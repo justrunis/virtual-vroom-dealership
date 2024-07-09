@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
+import { currencyFormatter } from "../../utils/formating";
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -21,6 +22,14 @@ export default function Cart() {
 
   function handleShowCheckout() {
     console.log("show checkout");
+  }
+
+  function decreaseItemHandler(id) {
+    dispatch(cartActions.removeItemFromCart(id));
+  }
+
+  function increaseItemHandler(item) {
+    dispatch(cartActions.addItemToCart(item));
   }
 
   return (
@@ -41,28 +50,33 @@ export default function Cart() {
                 <CartItem
                   key={item.id}
                   item={item}
-                  onDecrease={(id) => decreaseItemHandler(id)}
-                  onIncrease={(id) => increaseItemHandler(id)}
+                  onDecrease={() => decreaseItemHandler(item.id)}
+                  onIncrease={() => increaseItemHandler(item)}
                 />
               ))}
             </ul>
             <p className="my-4">
               Total:{" "}
               <span className="font-bold">
-                {allItems.reduce((acc, item) => acc + item.totalPrice, 0)}
+                {currencyFormatter.format(
+                  allItems.reduce((acc, item) => acc + item.totalPrice, 0)
+                )}
               </span>
             </p>
           </>
         )}
         <div className="flex justify-center gap-5">
-          <button className="btn btn-secondary" onClick={handleCloseCart}>
+          <button
+            className="btn btn-error text-white"
+            onClick={handleCloseCart}
+          >
             Close
           </button>
           {allItems.length > 0 && (
             <Link
               to="checkout"
               onClick={handleShowCheckout}
-              className="btn btn-primary"
+              className="btn btn-success text-white"
             >
               Checkout
             </Link>

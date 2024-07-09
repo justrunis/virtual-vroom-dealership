@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Carousel = ({ images }) => {
+const Carousel = ({
+  images,
+  className = "flex justify-center items-center w-auto h-full mb-20",
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const goToPreviousSlide = () => {
@@ -17,7 +20,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full h-full mb-20">
+    <div className={className}>
       <div className="carousel w-auto">
         {images.map((image, index) => (
           <div

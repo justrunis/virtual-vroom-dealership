@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../store/slices/cartSlice";
-import { toast } from "react-toastify";
+import { currencyFormatter, dateFormating } from "../../utils/formating";
 
 export default function VehicleCard({ car, delay = 0 }) {
   const dispatch = useDispatch();
@@ -9,6 +9,8 @@ export default function VehicleCard({ car, delay = 0 }) {
   function handleAddToCart() {
     dispatch(cartActions.addItemToCart(car));
   }
+
+  console.log(car);
 
   return (
     <motion.div
@@ -24,8 +26,8 @@ export default function VehicleCard({ car, delay = 0 }) {
       />
       <div className="p-4 primary-content">
         <h2 className="text-xl font-semibold">{car.make + " " + car.model}</h2>
-        <p className="text-gray-600">{car.year}</p>
-        <p className="text-gray-600">{car.price}</p>
+        <p className="text-gray-800">{car.year}</p>
+        <p className="text-gray-800">{currencyFormatter.format(car.price)}</p>
       </div>
       <div className="flex gap-5 justify-center items-center p-4">
         <button className="btn btn-primary">View Details</button>

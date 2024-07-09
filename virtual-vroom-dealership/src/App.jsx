@@ -2,9 +2,9 @@ import Home from "./pages/Home";
 import Models from "./pages/Models";
 import Vehicles from "./pages/Vehicles";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import BackgroundImage from "./components/Home/BackgroundImage";
 import carIcon from "./assets/background_image.jpg";
 import { Provider } from "react-redux";
@@ -20,7 +20,6 @@ function App() {
   return (
     <>
       <ThemeProvider>
-        <ToastContainer position="top-center" />
         <Provider store={store}>
           <BrowserRouter>
             <main className="flex flex-col min-h-screen">
@@ -31,6 +30,7 @@ function App() {
                   <Route path="/models" element={<Models />} />
                   <Route path="/vehicles/:make" element={<Vehicles />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/about" element={<About />} />
                 </Routes>
                 <Footer />
               </BackgroundImage>
