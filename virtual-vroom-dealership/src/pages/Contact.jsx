@@ -3,7 +3,7 @@ import Input from "../components/UI/Input";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
+    <div className="flex flex-col items-center justify-center h-full mb-20 lg:mb-0">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

@@ -2,7 +2,6 @@ import Modal from "../UI/Modal";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../store/slices/cartSlice";
 import { motion } from "framer-motion";
-import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 import { currencyFormatter } from "../../utils/formating";

@@ -6,7 +6,7 @@ export default function VehicleMakesCard({ make, delay }) {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate(`/vehicles/${make.make.toLowerCase()}`);
+    navigate(`/models/${make.make.toLowerCase()}`);
   }
 
   return (
@@ -21,7 +21,7 @@ export default function VehicleMakesCard({ make, delay }) {
         <img
           src={make.imageUrl}
           alt={make.make}
-          className="w-half w-1/2 object-fit"
+          className="w-full h-32 md:h-64 object-fit rounded-t-lg"
         />
       </div>
     </motion.div>

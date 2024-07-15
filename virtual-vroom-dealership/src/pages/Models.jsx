@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Models() {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const modelsPerPage = 9;
+  const modelsPerPage = 8;
   const indexOfLastModel = currentPage * modelsPerPage;
   const indexOfFirstModel = indexOfLastModel - modelsPerPage;
 
@@ -20,17 +20,16 @@ export default function Models() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="grid grid-cols-3 lg:gap-4 lg:p-4"
-      >
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-0 lg:gap-4 p-4 items-center">
         {currentModels.map((make, index) => (
           <VehicleMakesCard key={make.id} make={make} delay={index * 0.2} />
         ))}
-      </motion.div>
+      </div>
       <div className="flex justify-center items-center gap-4 mb-10">
         <Pager
           totalPages={totalPages}
@@ -38,6 +37,6 @@ export default function Models() {
           setCurrentPage={setCurrentPage}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

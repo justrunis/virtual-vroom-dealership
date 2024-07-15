@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   AiOutlineCar,
   AiOutlineShoppingCart,
@@ -57,7 +57,7 @@ export default function Header() {
       </div>
       <div className="flex flex-row items-center">
         <button
-          className="text-primary-content hover:text-base-100 text-xl font-bold mr-5 md:hidden"
+          className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5 lg:hidden"
           onClick={toggleMenu}
         >
           <svg
@@ -86,40 +86,48 @@ export default function Header() {
         </button>
         <nav
           className={`nav ${
-            windowWidth >= 700 && windowWidth <= 1024 ? "block" : "hidden"
-          } lg:block mr-10 flex flex-col lg:flex-row gap-2`}
+            isMenuOpen ? "block" : "hidden"
+          } lg:flex lg:flex-row lg:items-center lg:mr-10 flex flex-col gap-2`}
         >
-          <Link
+          <NavLink
+            exact
             to="/models"
-            className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+            activeClassName="font-bold"
+            className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlineCar className="inline mr-1" />
             Models
-          </Link>
-          <Link
-            to="/popular"
-            className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+          </NavLink>
+          <NavLink
+            exact
+            to="/favorites"
+            activeClassName="font-bold"
+            className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlineStar className="inline mr-1" />
-            Top picks
-          </Link>
-          <Link
+            Favorites
+          </NavLink>
+          <NavLink
+            exact
             to="/about"
-            className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+            activeClassName="font-bold"
+            className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlineInfoCircle className="inline mr-1" />
             About
-          </Link>{" "}
-          <Link
+          </NavLink>
+          <NavLink
+            exact
             to="/contact"
-            className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+            activeClassName="font-bold"
+            className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlinePhone className="inline mr-1" />
             Contact
-          </Link>
+          </NavLink>
           <Link
             onClick={handleShowCart}
-            className="text-primary-content hover:text-base-100 text-xl font-bold mr-5"
+            className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlineShoppingCart className="inline mr-1" />
             Cart {useSelector((state) => state.cart.items.length)}

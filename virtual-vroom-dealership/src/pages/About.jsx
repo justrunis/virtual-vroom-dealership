@@ -15,12 +15,10 @@ export default function About() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
-      className="text-center mb-20"
+      className="text-center mb-20 lg:text-2xl"
     >
-      <h1 className="text-4xl font-semibold text-primary-content mb-2">
-        About Us
-      </h1>
-      <p className="text-2xl text-primary-content ">
+      <h1 className="font-semibold text-primary-content mb-2">About Us</h1>
+      <p className=" text-primary-content ">
         We are a virtual car dealership that offers a wide range of vehicles.
         Our goal is to provide the best car shopping experience to our
         customers.
@@ -28,19 +26,19 @@ export default function About() {
       <div className="flex justify-center items-center w-full h-full mt-5">
         <Carousel
           images={images}
-          className="flex justify-center items-center w-1/2 h-1/2 mb-5"
+          className="flex justify-center items-center lg:w-1/2 lg:h-1/2 mb-5"
         />
       </div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="text-center w-1/2 mx-auto mb-20"
+        className="lg:w-1/2 mx-auto mb-20"
       >
-        <h2 className="text-2xl font-semibold text-primary-content mb-2">
+        <h2 className=" font-semibold text-primary-content mb-2">
           Our Mission
         </h2>
-        <p className="text-lg text-primary-content">
+        <p className="text-primary-content">
           At Virtual Vroom Dealership, our mission is to revolutionize the car
           buying process by providing a seamless online experience. We aim to
           make car shopping convenient, transparent, and enjoyable for our

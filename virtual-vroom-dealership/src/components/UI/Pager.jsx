@@ -6,7 +6,7 @@ const maxButtons = 5; // Number of buttons to display, including first and last
 function PageButton({ children, className, ...props }) {
   return (
     <Button
-      className={`btn flex justify-center items-center text-accent-content ${className}`}
+      className={`btn flex justify-center items-center text-accent-content px-2 py-1 sm:px-3 sm:py-2 ${className}`}
       {...props}
     >
       {children}
@@ -17,7 +17,8 @@ function PageButton({ children, className, ...props }) {
 export default function Pager({ totalPages, currentPage, setCurrentPage }) {
   const getItemProps = (index) => ({
     variant: currentPage === index ? "filled" : "text",
-    className: "btn btn-primary bg-accent-400 px-2 min-h-0 h-[2rem]",
+    className:
+      "btn btn-primary text-primary-content bg-accent-400 px-2 py-1 sm:px-3 sm:py-2 min-h-0",
     onClick: () => setCurrentPage(index),
   });
 
@@ -65,50 +66,33 @@ export default function Pager({ totalPages, currentPage, setCurrentPage }) {
     <div className="flex items-center gap-4">
       <button
         variant="text"
-        className="btn btn-primary text-secondary-content px-2 min-h-0 h-[3rem] hover:bg-secondary"
+        className="btn btn-primary text-primary-content px-2 py-1 sm:px-3 sm:py-2 min-h-0 h-8 sm:h-10 hover:bg-accent hover:text-accent-content"
         onClick={prev}
         disabled={currentPage === 1}
       >
-        <FaArrowAltCircleLeft className="h-4 w-4" /> Previous
+        <FaArrowAltCircleLeft className="h-4 w-4" />
       </button>
       <div className="flex items-center gap-2">
-        {currentPage > Math.floor(maxButtons / 2) && (
-          <>
-            <PageButton {...getItemProps(1)}>1</PageButton>
-            {currentPage > Math.floor(maxButtons / 2) + 1 && (
-              <span className="text-base-content">...</span>
-            )}
-          </>
-        )}
         {getPagerButtons().map((page) => (
           <PageButton
             key={page}
             {...getItemProps(page)}
             className={
               currentPage !== page
-                ? "bg-primary hover:bg-secondary text-secondary-content"
-                : "bg-accent hover:bg-secondary text-secondary-content"
+                ? "bg-primary hover:bg-accent text-primary-content"
+                : "bg-accent hover:bg-accent text-primary-content"
             }
           >
             {page}
           </PageButton>
         ))}
-        {currentPage < totalPages - Math.floor(maxButtons / 2) + 1 && (
-          <>
-            {currentPage < totalPages - Math.floor(maxButtons / 2) && (
-              <span className="text-base-content">...</span>
-            )}
-            <PageButton {...getItemProps(totalPages)}>{totalPages}</PageButton>
-          </>
-        )}
       </div>
       <button
         variant="text"
-        className="btn btn-primary text-secondary-content px-2 min-h-0 h-[3rem] hover:bg-secondary"
+        className="btn btn-primary text-primary-content px-2 py-1 sm:px-3 sm:py-2 min-h-0 h-8 sm:h-10 hover:bg-accent"
         onClick={next}
         disabled={currentPage === totalPages}
       >
-        Next
         <FaArrowAltCircleRight strokeWidth={2} className="h-4 w-4" />
       </button>
     </div>
