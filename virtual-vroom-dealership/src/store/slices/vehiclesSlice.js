@@ -3,7 +3,7 @@ import { cars } from "../../data/cars";
 
 const initialVehiclesState = {
   vehicles: cars,
-  totalQuantity: 0,
+  totalQuantity: cars.length,
 };
 
 const vehiclesSlice = createSlice({

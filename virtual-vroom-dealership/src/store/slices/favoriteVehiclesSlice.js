@@ -11,7 +11,6 @@ const favoriteVehiclesSlice = createSlice({
   reducers: {
     addFavorite(state, action) {
       const vehicle = action.payload;
-      console.log("VEHICLE: " + vehicle);
       const existingVehicle = state.favoriteVehicles.find(
         (v) => v.id === vehicle.id
       );

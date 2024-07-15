@@ -90,36 +90,28 @@ export default function Header() {
           } lg:flex lg:flex-row lg:items-center lg:mr-10 flex flex-col gap-2`}
         >
           <NavLink
-            exact
             to="/models"
-            activeClassName="font-bold"
             className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlineCar className="inline mr-1" />
             Models
           </NavLink>
           <NavLink
-            exact
             to="/favorites"
-            activeClassName="font-bold"
             className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlineStar className="inline mr-1" />
             Favorites
           </NavLink>
           <NavLink
-            exact
             to="/about"
-            activeClassName="font-bold"
             className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlineInfoCircle className="inline mr-1" />
             About
           </NavLink>
           <NavLink
-            exact
             to="/contact"
-            activeClassName="font-bold"
             className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
           >
             <AiOutlinePhone className="inline mr-1" />

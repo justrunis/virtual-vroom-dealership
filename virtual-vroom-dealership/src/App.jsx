@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import PopularVehicles from "./pages/PopularVehicles";
 import Vehicle from "./pages/Vehicle";
+import Admin from "./pages/Admin";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BackgroundImage from "./components/Home/BackgroundImage";
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/favorites" element={<PopularVehicles />} />
+                <Route path="/admin" element={<Admin />} />
               </Routes>
               <Footer />
             </BackgroundImage>

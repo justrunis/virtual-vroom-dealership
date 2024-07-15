@@ -8,7 +8,6 @@ export default function PopularVehicles() {
   const favoriteVehicles = useSelector(
     (state) => state.favoriteVehicles.favoriteVehicles
   );
-  console.log(favoriteVehicles);
 
   const [currentPage, setCurrentPage] = useState(1);
 
