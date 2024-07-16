@@ -6,6 +6,7 @@ import About from "./pages/About";
 import PopularVehicles from "./pages/PopularVehicles";
 import Vehicle from "./pages/Vehicle";
 import Admin from "./pages/Admin";
+import PageNotFound from "./pages/PageNotFound";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BackgroundImage from "./components/Home/BackgroundImage";
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/favorites" element={<PopularVehicles />} />
                 <Route path="/admin" element={<Admin />} />
+                <Route path="*" element={<PageNotFound />} />
               </Routes>
               <Footer />
             </BackgroundImage>
