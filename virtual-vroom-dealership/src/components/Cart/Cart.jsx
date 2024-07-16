@@ -1,13 +1,13 @@
 import Modal from "../UI/Modal";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../store/slices/cartSlice";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 import { currencyFormatter } from "../../utils/formating";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const allItems = useSelector((state) => state.cart.items);
   const showCart = useSelector((state) => state.cart.showCart);
 
@@ -21,6 +21,8 @@ export default function Cart() {
 
   function handleShowCheckout() {
     console.log("show checkout");
+    handleCloseCart();
+    navigate("/checkout");
   }
 
   function decreaseItemHandler(id) {
@@ -72,13 +74,13 @@ export default function Cart() {
             Close
           </button>
           {allItems.length > 0 && (
-            <Link
-              to="checkout"
+            <button
+              type="button"
+              className="btn btn-primary"
               onClick={handleShowCheckout}
-              className="btn btn-success text-white"
             >
               Checkout
-            </Link>
+            </button>
           )}
         </div>
       </div>

@@ -7,6 +7,7 @@ import {
   AiOutlineInfoCircle,
   AiOutlineStar,
 } from "react-icons/ai";
+import { RiAdminLine } from "react-icons/ri";
 import logo from "../../../public/logo-no-background.svg";
 import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
@@ -103,6 +104,15 @@ export default function Header() {
             <AiOutlineStar className="inline mr-1" />
             Favorites
           </NavLink>
+
+          <NavLink
+            to="/admin"
+            className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"
+          >
+            <RiAdminLine className="inline mr-1" />
+            Admin
+          </NavLink>
+
           <NavLink
             to="/about"
             className="text-primary-content hover:text-base-100 text-sm lg:text-lg font-bold mr-5"

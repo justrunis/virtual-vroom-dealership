@@ -11,14 +11,17 @@ const makesSlice = createSlice({
   initialState: initialMakesState,
   reducers: {
     addMake(state, action) {
-      const make = action.payload;
-      const existingMake = state.makes.find((m) => m.id === make.id);
-      if (!existingMake) {
-        state.makes.push({
-          id: make.id,
-          name: make.name,
-        });
-        state.totalQuantity++;
+      const { make, imageUrl } = action.payload;
+      state.makes.push({ id: state.makes.length + 1, make, imageUrl });
+      state.totalQuantity++;
+    },
+    updateMake(state, action) {
+      const { id, make } = action.payload;
+      const existingMake = state.makes.find((m) => m.id === id);
+      if (existingMake) {
+        existingMake.make = make.make || existingMake.make;
+        existingMake.imageUrl =
+          make.imageUrl !== undefined ? make.imageUrl : existingMake.imageUrl;
       }
     },
     removeMake(state, action) {

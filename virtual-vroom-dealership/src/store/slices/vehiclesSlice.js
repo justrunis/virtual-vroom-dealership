@@ -11,17 +11,62 @@ const vehiclesSlice = createSlice({
   initialState: initialVehiclesState,
   reducers: {
     addVehicle(state, action) {
-      const vehicle = action.payload;
-      const existingVehicle = state.vehicles.find((v) => v.id === vehicle.id);
-      if (!existingVehicle) {
-        state.vehicles.push({
-          id: vehicle.id,
-          make: vehicle.make,
-          model: vehicle.model,
-          imageUrl: vehicle.imageUrl,
-          price: parseFloat(vehicle.price),
-        });
-        state.totalQuantity++;
+      const {
+        make,
+        model,
+        year,
+        price,
+        imageUrl,
+        color,
+        mileage,
+        type,
+        gearboxType,
+        fuelType,
+      } = action.payload;
+
+      state.vehicles.push({
+        id: state.vehicles.length + 1,
+        make,
+        model,
+        year,
+        price: parseFloat(price),
+        imageUrl,
+        color,
+        mileage,
+        type,
+        gearboxType,
+        fuelType,
+      });
+      state.totalQuantity++;
+    },
+    updateVehicle(state, action) {
+      console.log(action.payload);
+      const { id, vehicle } = action.payload;
+      const {
+        make,
+        model,
+        year,
+        price,
+        imageUrl,
+        color,
+        mileage,
+        type,
+        gearboxType,
+        fuelType,
+      } = vehicle;
+
+      const existingVehicle = state.vehicles.find((v) => v.id === id);
+      if (existingVehicle) {
+        existingVehicle.make = make;
+        existingVehicle.model = model;
+        existingVehicle.year = year;
+        existingVehicle.price = parseFloat(price);
+        existingVehicle.imageUrl = imageUrl;
+        existingVehicle.color = color;
+        existingVehicle.mileage = mileage;
+        existingVehicle.type = type;
+        existingVehicle.gearboxType = gearboxType;
+        existingVehicle.fuelType = fuelType;
       }
     },
     removeVehicle(state, action) {

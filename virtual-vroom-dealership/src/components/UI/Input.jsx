@@ -8,6 +8,8 @@ export default function Input({
   labelClass,
   value,
   delay,
+  type = "text",
+  containerClass,
   ...props
 }) {
   const inputVariants = {
@@ -16,7 +18,7 @@ export default function Input({
   };
 
   return (
-    <>
+    <div className={containerClass}>
       <motion.label
         className={`block text-sm font-bold ${labelClass}`}
         htmlFor={id}
@@ -43,6 +45,7 @@ export default function Input({
         <motion.input
           id={id}
           name={id}
+          type={type}
           value={value}
           {...props}
           initial="hidden"
@@ -62,6 +65,6 @@ export default function Input({
           {error}
         </motion.p>
       )}
-    </>
+    </div>
   );
 }

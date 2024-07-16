@@ -7,7 +7,7 @@ export const cars = [
     price: 20000,
     imageUrl:
       "https://i.pinimg.com/736x/e2/86/11/e286116013bb23582db360dd12d593e3.jpg",
-    color: "white",
+    color: "White",
     mileage: 5000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -20,7 +20,7 @@ export const cars = [
     year: 2021,
     price: 25000,
     imageUrl: "https://freepngimg.com/save/31953-honda-civic/779x369",
-    color: "white",
+    color: "White",
     mileage: 3000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -33,7 +33,7 @@ export const cars = [
     year: 2022,
     price: 35000,
     imageUrl: "https://pngimg.com/d/mustang_PNG47.png",
-    color: "blue",
+    color: "Blue",
     mileage: 1500,
     type: "Sports",
     gearboxType: "Manual",
@@ -47,7 +47,7 @@ export const cars = [
     price: 30000,
     imageUrl:
       "https://i.pinimg.com/originals/e7/c7/f5/e7c7f5d816bc9dc15583343d73cbda43.png",
-    color: "yellow",
+    color: "Yellow",
     mileage: 8000,
     type: "Sports",
     gearboxType: "Manual",
@@ -60,7 +60,7 @@ export const cars = [
     year: 2021,
     price: 40000,
     imageUrl: "https://cdn.euroncap.com/media/55096/bmw-3-series.png",
-    color: "white",
+    color: "White",
     mileage: 4000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -74,7 +74,7 @@ export const cars = [
     price: 45000,
     imageUrl:
       "https://pics.clipartpng.com/Polar_White_Mercedes_Benz_C_Class_2014_Car_PNG_Clipart-121.png",
-    color: "silver",
+    color: "Silver",
     mileage: 2000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -88,7 +88,7 @@ export const cars = [
     price: 38000,
     imageUrl:
       "https://di-uploads-pod3.dealerinspire.com/vindeversautohausofsylvania/uploads/2019/02/2019-Audi-A4-MLP-Hero.png",
-    color: "black",
+    color: "Black",
     mileage: 6000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -102,7 +102,7 @@ export const cars = [
     price: 70000,
     imageUrl:
       "https://www.pngall.com/wp-content/uploads/11/Tesla-Model-S-PNG-Free-Image.png",
-    color: "red",
+    color: "Red",
     mileage: 1000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -116,7 +116,7 @@ export const cars = [
     price: 48000,
     imageUrl:
       "https://purepng.com/public/uploads/large/purepng.com-lexus-rx-350-f-white-carcarvehicletransportlexus-961524658910lzvkm.png",
-    color: "white",
+    color: "White",
     mileage: 3000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -130,7 +130,7 @@ export const cars = [
     price: 32000,
     imageUrl:
       "https://i.pinimg.com/originals/d6/7d/61/d67d616b7f2698452cd331f0819beb92.png",
-    color: "white",
+    color: "White",
     mileage: 5000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -143,7 +143,7 @@ export const cars = [
     year: 2021,
     price: 22000,
     imageUrl: "https://cdn.euroncap.com/media/71344/vw-golf.png",
-    color: "blue",
+    color: "Blue",
     mileage: 4000,
     type: "Hatchback",
     gearboxType: "Manual",
@@ -157,7 +157,7 @@ export const cars = [
     price: 38000,
     imageUrl:
       "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25e46530b1e3d8e88cb/stills_0640_png/MY2021/14720/14720_st0640_116.png",
-    color: "red",
+    color: "Red",
     mileage: 2000,
     type: "SUV",
     gearboxType: "Manual",
@@ -171,7 +171,7 @@ export const cars = [
     price: 24000,
     imageUrl:
       "https://vehicle-images.dealerinspire.com/stock-images/chrome/e8e53b496bc9d2d4b99ed8301e9e330b.png",
-    color: "blue",
+    color: "Blue",
     mileage: 3000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -185,7 +185,7 @@ export const cars = [
     price: 28000,
     imageUrl:
       "https://media-assets.mazda.eu/image/upload/q_auto,f_auto/mazdauk/globalassets/cars/2023-mazda-cx-5/clearcuts/mme_cx5_kdssbad_46v_7-8.png?rnd=48ff7a",
-    color: "red",
+    color: "Red",
     mileage: 1500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -199,7 +199,7 @@ export const cars = [
     price: 26000,
     imageUrl:
       "https://vehicle-images.dealerinspire.com/stock-images/chrome/eb35f25a7c3adc7f2fed6dd3bbbeaece.png",
-    color: "gray",
+    color: "Gray",
     mileage: 5000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -213,7 +213,7 @@ export const cars = [
     price: 32000,
     imageUrl:
       "https://di-uploads-pod19.dealerinspire.com/rontonkinkia/uploads/2022/12/mlp-img-top-2023-sorento-temp.png",
-    color: "silver",
+    color: "Silver",
     mileage: 2000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -227,7 +227,7 @@ export const cars = [
     price: 40000,
     imageUrl:
       "https://www.lloydmotorgroup.com/ImageLibrary/images/Volvo/Retail/New%20Car%20Range/V2/Volvo_XC60_Mild_Hybrid_Core.png?mode=max&upscale=true&width=640",
-    color: "gray",
+    color: "Gray",
     mileage: 4000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -241,7 +241,7 @@ export const cars = [
     price: 90000,
     imageUrl:
       "https://platform.cstatic-images.com/in/v2/stock_photos/c709cfc8-56fa-4a5c-865a-99193e3f56bb/40744381-289d-44f3-87ed-ba452e991480.png",
-    color: "silver",
+    color: "Silver",
     mileage: 1000,
     type: "Sports",
     gearboxType: "Manual",
@@ -255,7 +255,7 @@ export const cars = [
     price: 75000,
     imageUrl:
       "https://i.pinimg.com/originals/58/b1/14/58b1147d12c03bfbb8d902a96a80f187.png",
-    color: "orange",
+    color: "Orange",
     mileage: 3000,
     type: "Sports",
     gearboxType: "Manual",
@@ -269,7 +269,7 @@ export const cars = [
     price: 100000,
     imageUrl:
       "https://www.pngall.com/wp-content/uploads/7/Land-Rover-PNG-Download-Image.png",
-    color: "black",
+    color: "Black",
     mileage: 500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -283,7 +283,7 @@ export const cars = [
     price: 25000,
     imageUrl:
       "https://www.kindpng.com/picc/m/348-3482731_toyota-camry-png-transparent-png.png",
-    color: "silver",
+    color: "Silver",
     mileage: 4000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -297,7 +297,7 @@ export const cars = [
     price: 27000,
     imageUrl:
       "https://purepng.com/public/uploads/large/purepng.com-blue-honda-accord-hybrid-carcarvehicletransporthonda-961524653570veqwm.png",
-    color: "blue",
+    color: "Blue",
     mileage: 3500,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -311,7 +311,7 @@ export const cars = [
     price: 45000,
     imageUrl:
       "https://build.ford.com/dig/Ford/F-150%20F-150/2024/HD-TILE/Image%5B%7CFord%7CF-150%20F-150%7C2024%7C1%7C1.%7C501A..145.PLJ..88H.89B.A5GAB.SS5.573.924.BLBA8.55D.BSHDF.BY1AM.CCAB.64L.AWD.995.779.%5D/EXT/1/vehicle.png",
-    color: "brown",
+    color: "Brown",
     mileage: 5000,
     type: "Truck",
     gearboxType: "Automatic",
@@ -325,7 +325,7 @@ export const cars = [
     price: 23000,
     imageUrl:
       "https://www.kindpng.com/picc/m/13-139311_new-chevy-malibu-2016-black-chevy-malibu-hd.png",
-    color: "black",
+    color: "Black",
     mileage: 3000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -339,7 +339,7 @@ export const cars = [
     price: 60000,
     imageUrl:
       "https://i.pinimg.com/736x/be/9f/3f/be9f3f51514d122ff56dbbab42b20231.jpg",
-    color: "black",
+    color: "Black",
     mileage: 2000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -353,7 +353,7 @@ export const cars = [
     price: 70000,
     imageUrl:
       "https://di-uploads-pod7.dealerinspire.com/mercedesbenzburlingtonca/uploads/2018/02/2018-Mercedes-Benz-GLE-S-63-4MATIC-Coupe-PNG-Banner-Image-600-copy.png",
-    color: "silver",
+    color: "Silver",
     mileage: 1500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -367,7 +367,7 @@ export const cars = [
     price: 65000,
     imageUrl:
       "https://purepng.com/public/uploads/large/purepng.com-audi-q7-caraudicars-961524670848felfc.png",
-    color: "black",
+    color: "Black",
     mileage: 2500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -381,7 +381,7 @@ export const cars = [
     price: 55000,
     imageUrl:
       "https://www.tesla.com/sites/default/files/images/support/Meet-Your-Tesla-Model-3.png",
-    color: "gray",
+    color: "Gray",
     mileage: 1000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -394,7 +394,7 @@ export const cars = [
     year: 2022,
     price: 50000,
     imageUrl: "https://discoverlexus.com/_nuxt/assets/nx2022_320-4aafd3.png",
-    color: "gray",
+    color: "Gray",
     mileage: 3500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -408,7 +408,7 @@ export const cars = [
     price: 32000,
     imageUrl:
       "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65947590d1e3d8e88cb10/stills_0640_png/MY2024/53686/53686_st0640_116.png",
-    color: "red",
+    color: "Red",
     mileage: 4000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -422,7 +422,7 @@ export const cars = [
     price: 28000,
     imageUrl:
       "https://di-uploads-pod33.dealerinspire.com/lutherbrookdalevolkswagen/uploads/2021/01/2020-VW-Passat-MLP-Hero.png",
-    color: "red",
+    color: "Red",
     mileage: 3500,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -436,7 +436,7 @@ export const cars = [
     price: 35000,
     imageUrl:
       "https://purepng.com/public/uploads/large/purepng.com-jeep-grand-cherokee-carcarvehicletransportjeep-961524665863wbpmz.png",
-    color: "white",
+    color: "White",
     mileage: 3000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -450,7 +450,7 @@ export const cars = [
     price: 21000,
     imageUrl:
       "https://di-uploads-pod19.dealerinspire.com/firstteamnissanofnewrivervalley/uploads/2024/05/2024-Nissan-Sentra-PNG-1.png",
-    color: "blue",
+    color: "Blue",
     mileage: 4000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -463,7 +463,7 @@ export const cars = [
     year: 2022,
     price: 23000,
     imageUrl: "https://pngimg.com/d/mazda_PNG67.png",
-    color: "white",
+    color: "White",
     mileage: 3000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -477,7 +477,7 @@ export const cars = [
     price: 22000,
     imageUrl:
       "https://images.dealer.com/ddc/vehicles/2023/Hyundai/Elantra/Sedan/perspective/front-left/2023_24.png",
-    color: "gray",
+    color: "Gray",
     mileage: 3000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -491,7 +491,7 @@ export const cars = [
     price: 25000,
     imageUrl:
       "https://www.pngkey.com/png/full/487-4871192_kia-sportage-gt-line-blue-flame-kia-sportage.png",
-    color: "blue",
+    color: "Blue",
     mileage: 3500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -505,7 +505,7 @@ export const cars = [
     price: 55000,
     imageUrl:
       "https://images.dealer.com/ddc/vehicles/2021/Volvo/XC90/SUV/perspective/front-left/2021_76.png",
-    color: "silver",
+    color: "Silver",
     mileage: 2000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -519,7 +519,7 @@ export const cars = [
     price: 80000,
     imageUrl:
       "https://purepng.com/public/uploads/large/purepng.com-red-and-black-porsche-cayenne-carcarvehicletransportporsche-9615246555334vztv.png",
-    color: "red",
+    color: "Red",
     mileage: 1000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -533,7 +533,7 @@ export const cars = [
     price: 65000,
     imageUrl:
       "https://i.pinimg.com/originals/52/0d/fc/520dfc3acc21e63cb04f0c366387dba7.png",
-    color: "white",
+    color: "White",
     mileage: 2000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -547,7 +547,7 @@ export const cars = [
     price: 85000,
     imageUrl:
       "https://vehicle-images.dealerinspire.com/stock-images/thumbnails/large/chrome/0b7a518e0512193dff194d27dc3bd643.png",
-    color: "blue",
+    color: "Blue",
     mileage: 1500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -562,7 +562,7 @@ export const cars = [
     price: 53000,
     imageUrl:
       "https://images.dealer.com/ddc/vehicles/2022/Audi/Q5/SUV/trim_45_S_line_Premium_198e80/perspective/front-left/2022_76.png",
-    color: "white",
+    color: "White",
     mileage: 3000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -576,7 +576,7 @@ export const cars = [
     price: 60000,
     imageUrl:
       "https://www.kindpng.com/picc/m/313-3133066_audi-a6-png-transparent-png.png",
-    color: "blue",
+    color: "Blue",
     mileage: 2000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -590,7 +590,7 @@ export const cars = [
     price: 40000,
     imageUrl:
       "https://i.pinimg.com/originals/6c/19/92/6c19928cebf50c459f0e109afe7c7794.png",
-    color: "red",
+    color: "Red",
     mileage: 2500,
     type: "SUV",
     gearboxType: "Automatic",
@@ -604,7 +604,7 @@ export const cars = [
     price: 25000,
     imageUrl:
       "https://karoubiscarrental.com/wp-content/uploads/2021/06/auris.jpg",
-    color: "blue",
+    color: "Blue",
     mileage: 4000,
     type: "Hatchback",
     gearboxType: "Automatic",
@@ -618,7 +618,7 @@ export const cars = [
     price: 28000,
     imageUrl:
       "https://purepng.com/public/uploads/large/purepng.com-blue-toyota-rav4-hybrid-carcarvehicletransporttoyota-961524645526athex.png",
-    color: "blue",
+    color: "Blue",
     mileage: 3000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -632,7 +632,7 @@ export const cars = [
     price: 35000,
     imageUrl:
       "https://images.dealer.com/ddc/vehicles/2024/Toyota/Highlander/SUV/perspective/front-left/2024_24.png",
-    color: "red",
+    color: "Red",
     mileage: 2000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -646,7 +646,7 @@ export const cars = [
     price: 24000,
     imageUrl:
       "https://www.pngkey.com/png/full/167-1679615_25-toyota-prius-3rd-gen.png",
-    color: "white",
+    color: "White",
     mileage: 3500,
     type: "Hatchback",
     gearboxType: "Automatic",
@@ -660,7 +660,7 @@ export const cars = [
     price: 55000,
     imageUrl:
       "https://purepng.com/public/uploads/large/purepng.com-white-bmw-x3-carcarbmwvehicletransport-961524661340tuwek.png",
-    color: "white",
+    color: "White",
     mileage: 2000,
     type: "SUV",
     gearboxType: "Automatic",
@@ -674,7 +674,7 @@ export const cars = [
     price: 62000,
     imageUrl:
       "https://www.bmw.cc/content/dam/bmw/common/all-models/5-series/sedan/2023/ice2_Titan-Bronze_810-501.png",
-    color: "blue",
+    color: "Blue",
     mileage: 2500,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -688,7 +688,7 @@ export const cars = [
     price: 37000,
     imageUrl:
       "https://i.pinimg.com/originals/ba/f4/5b/baf45b87cd0ab0b8a66a83b75fdf8cd1.png",
-    color: "blue",
+    color: "Blue",
     mileage: 3000,
     type: "Sedan",
     gearboxType: "Automatic",
@@ -812,3 +812,52 @@ export const carMakes = [
       "https://www.carlogos.org/logo/Land-Rover-logo-2011-1920x1080.png",
   },
 ];
+
+export const colors = [
+  "White",
+  "Black",
+  "Red",
+  "Blue",
+  "Silver",
+  "Gray",
+  "Yellow",
+  "Orange",
+  "Brown",
+  "Green",
+  "Purple",
+  "Gold",
+  "Beige",
+  "Bronze",
+  "Maroon",
+  "Pink",
+  "Teal",
+  "Burgundy",
+  "Navy",
+];
+
+export const carTypes = [
+  "Sedan",
+  "Sports",
+  "SUV",
+  "Hatchback",
+  "Truck",
+  "Coupe",
+  "Convertible",
+  "Wagon",
+  "Van",
+  "Minivan",
+  "Hybrid",
+  "Electric",
+  "Diesel",
+  "Luxury",
+  "Crossover",
+  "Off-Road",
+  "Compact",
+  "Subcompact",
+  "Microcar",
+  "Roadster",
+];
+
+export const gearboxTypes = ["Automatic", "Manual", "CVT", "DSG", "Tiptronic"];
+
+export const fuelTypes = ["Petrol", "Diesel", "Electric", "Hybrid"];

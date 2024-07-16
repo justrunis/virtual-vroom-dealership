@@ -4,6 +4,7 @@ import { useState } from "react";
 import Pager from "../components/UI/Pager";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import SearchBar from "../components/UI/SearchBar";
 
 export default function Vehicles() {
   const { make } = useParams();
@@ -15,17 +16,25 @@ export default function Vehicles() {
   );
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredVehicles = vehicles.filter((vehicle) =>
+    vehicle.model.toLowerCase().includes(searchQuery)
+  );
 
   const vehiclesPerPage = 6;
   const indexOfLastVehicle = currentPage * vehiclesPerPage;
   const indexOfFirstVehicle = indexOfLastVehicle - vehiclesPerPage;
 
-  let currentVehicles = [];
-  let totalPages = 0;
+  const currentVehicles = filteredVehicles.slice(
+    indexOfFirstVehicle,
+    indexOfLastVehicle
+  );
+  const totalPages = Math.ceil(filteredVehicles.length / vehiclesPerPage);
 
-  if (vehicles.length > 0) {
-    currentVehicles = vehicles.slice(indexOfFirstVehicle, indexOfLastVehicle);
-    totalPages = Math.ceil(vehicles.length / vehiclesPerPage);
+  function handleSearch(query) {
+    setSearchQuery(query.toLowerCase());
+    setCurrentPage(1);
   }
 
   return (
@@ -34,6 +43,7 @@ export default function Vehicles() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SearchBar onSearch={handleSearch} placeholder="Search models" />
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4 p-4">
         {currentVehicles.map((vehicle, index) => (
           <VehicleCard key={vehicle.id} car={vehicle} delay={index * 0.2} />

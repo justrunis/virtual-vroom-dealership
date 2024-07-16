@@ -8,11 +8,17 @@ export default function Modal({ children, open, onClose, className = "" }) {
 
   useEffect(() => {
     const modal = dialog.current;
+    const body = document.body;
     if (open) {
       modal.style.display = "block";
+      body.classList.add("modal-open");
     } else {
       modal.style.display = "none";
+      body.classList.remove("modal-open");
     }
+    return () => {
+      body.classList.remove("modal-open");
+    };
   }, [open]);
 
   return createPortal(

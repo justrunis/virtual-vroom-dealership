@@ -5,9 +5,13 @@ import { useNavigate } from "react-router-dom";
 import SearchBar from "../UI/SearchBar";
 import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
 import MakeModal from "./MakeModal";
+import ConfirmationModal from "../UI/ConfirmationModal";
+import { useDispatch } from "react-redux";
+import { makesActions } from "../../store/slices/makesSlice";
 
 export default function MakesTable() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const allCarMakes = useSelector((state) => state.makes.makes);
   const allCars = useSelector((state) => state.vehicles.vehicles);
@@ -18,6 +22,8 @@ export default function MakesTable() {
 
   const [showModal, setShowModal] = useState(false);
   const [editMake, setEditMake] = useState(null);
+
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const makesPerPage = 8;
 
@@ -93,62 +99,92 @@ export default function MakesTable() {
     setShowModal(false);
   }
 
+  function showMakeRemoveModal(make) {
+    setEditMake(make);
+    setIsDeleting(true);
+  }
+
+  function handleMakeRemove() {
+    dispatch(makesActions.removeMake(editMake.id));
+    setIsDeleting(false);
+  }
+
   return (
     <div>
-      <SearchBar onSearch={handleSearch} placeholder="Search by make" />
+      <SearchBar onSearch={handleSearch} placeholder="Search Makes" />
       {showModal && (
         <MakeModal open={showModal} make={editMake} onClose={handleHideForm} />
+      )}
+      {isDeleting && (
+        <ConfirmationModal
+          open={isDeleting}
+          onClose={() => setIsDeleting(false)}
+          onConfirm={handleMakeRemove}
+          message={`Are you sure you want to delete ${editMake.make}?`}
+        />
       )}
       <button onClick={handleMakeModal} className="btn btn-success">
         Add Make
       </button>
-      <table className="table w-full">
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th onClick={() => requestSort("id")} className="cursor-pointer">
-              ID {getSortIcon("id")}
-            </th>
-            <th onClick={() => requestSort("make")} className="cursor-pointer">
-              Make {getSortIcon("make")}
-            </th>
-            <th>Car Count</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedMakes().map((make) => (
-            <tr key={make.id}>
-              <td>
-                <img
-                  className="w-20 h-10 object-contain rounded-lg"
-                  src={make.imageUrl}
-                  alt={make.make}
-                />
-              </td>
-              <td>{make.id}</td>
-              <td>{make.make}</td>
-              <td>{getCarCountForMake(make.make)}</td>
-              <td className="flex gap-2">
-                <button
-                  onClick={() => navigate(`/models/${make.make.toLowerCase()}`)}
-                  className="btn btn-sm btn-primary"
-                >
-                  View Cars
-                </button>
-                <button
-                  onClick={() => handleMakeModal(make)}
-                  className="btn btn-sm btn-warning"
-                >
-                  Edit
-                </button>
-                <button className="btn btn-sm btn-error">Delete</button>
-              </td>
+      <div className="overflow-x-auto">
+        <table className="table-xs sm:table-sm md:table-md lg:table w-full table-zebra table-pin-rows table-pin-cols">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th onClick={() => requestSort("id")} className="cursor-pointer">
+                ID {getSortIcon("id")}
+              </th>
+              <th
+                onClick={() => requestSort("make")}
+                className="cursor-pointer"
+              >
+                Make {getSortIcon("make")}
+              </th>
+              <th>Car Count</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="flex justify-center items-center gap-4 mb-10">
+          </thead>
+          <tbody>
+            {sortedMakes().map((make) => (
+              <tr key={make.id}>
+                <td>
+                  <img
+                    className="w-10 h-5 lg:w-20 lg:h-10 object-contain rounded-lg"
+                    src={make.imageUrl}
+                    alt={make.make}
+                  />
+                </td>
+                <td>{make.id}</td>
+                <td>{make.make}</td>
+                <td>{getCarCountForMake(make.make)}</td>
+                <td className="flex flex-col lg:flex-row gap-1 lg:gap-2">
+                  <button
+                    onClick={() =>
+                      navigate(`/models/${make.make.toLowerCase()}`)
+                    }
+                    className="btn btn-sm md:btn-md btn-primary"
+                  >
+                    View
+                  </button>
+                  <button
+                    onClick={() => handleMakeModal(make)}
+                    className="btn btn-xs md:btn-md btn-warning"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => showMakeRemoveModal(make)}
+                    className="btn btn-xs md:btn-md btn-error"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="flex justify-center items-center gap-4 m-5">
         <Pager
           totalPages={totalPages}
           currentPage={currentPage}
