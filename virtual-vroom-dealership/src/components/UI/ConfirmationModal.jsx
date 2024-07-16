@@ -6,6 +6,7 @@ export default function ConfirmationModal({
   onClose,
   onConfirm,
   message,
+  title = "Confirm",
 }) {
   return (
     <Modal open={open} onClose={onClose}>
@@ -15,14 +16,14 @@ export default function ConfirmationModal({
         transition={{ duration: 0.3 }}
         className="flex flex-col gap-4"
       >
-        <h2 className="text-2xl font-bold">Confirm</h2>
+        <h2 className="text-2xl font-bold">{title}</h2>
         <p className="text-lg">{message}</p>
         <div className="flex gap-4">
           <button onClick={onConfirm} className="btn btn-success">
             Confirm
           </button>
           <button onClick={onClose} className="btn btn-error">
-            Cancel
+            Close
           </button>
         </div>
       </motion.div>

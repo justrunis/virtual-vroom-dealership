@@ -6,6 +6,7 @@ import About from "./pages/About";
 import PopularVehicles from "./pages/PopularVehicles";
 import Vehicle from "./pages/Vehicle";
 import Admin from "./pages/Admin";
+import Checkout from "./pages/Checkout";
 import PageNotFound from "./pages/PageNotFound";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/favorites" element={<PopularVehicles />} />
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/checkout" element={<Checkout />} />
                 <Route path="*" element={<PageNotFound />} />
               </Routes>
               <Footer />
