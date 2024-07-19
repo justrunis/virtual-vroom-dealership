@@ -8,7 +8,7 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import { RiAdminLine } from "react-icons/ri";
-import logo from "../../../public/logo-no-background.svg";
+import logo from "/logo-no-background.svg";
 import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../store/slices/cartSlice";

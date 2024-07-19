@@ -1,7 +1,7 @@
 import HeroSection from "../components/Home/HeroSection";
 import FeaturesSection from "../components/Home/FeaturesSection";
 import CallToAction from "../components/Home/CallToAction";
-import logo from "../../public/logo-no-background.svg";
+import logo from "/logo-no-background.svg";
 import Image from "../components/UI/Image";
 import Carousel from "../components/UI/Carousel";
 
